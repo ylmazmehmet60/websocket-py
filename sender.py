@@ -7,7 +7,7 @@ async def send_messages():
     uri = "ws://localhost:12345"
     try:
         async with websockets.connect(uri, subprotocols=[TOKEN]) as websocket:
-            message = f"erhaan baraab"
+            message = f"add message"
             print(f"Sending: {message}")
             await websocket.send(message)
     except ConnectionRefusedError:
